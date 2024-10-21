@@ -37,4 +37,8 @@ export class BattleGraphService {
     this.display = new Display(canvas, ctx, this.model);
     this.display.startAnimationLoop();
   }
+
+  requestSizeCalibration(): void {
+    this.display.requestSizeCalibration();
+  }
 }
