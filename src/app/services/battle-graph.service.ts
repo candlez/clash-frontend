@@ -1,7 +1,7 @@
 import { Injectable, ElementRef } from '@angular/core';
 
 import { Display } from '../../shared/Display';
-import { Model } from '../../shared/Model';
+import { Model, Player } from '../../shared/Model';
 
 @Injectable({
   providedIn: 'root'
@@ -29,6 +29,12 @@ export class BattleGraphService {
 
     this.model = new Model();
 
+    const player = new Player(100, 100);
+    this.model.addPlayer(player);
+    this.model.addPlayer(new Player(200, 200));
+    this.model.setSelectedPlayer(player);
+
     this.display = new Display(canvas, ctx, this.model);
+    this.display.startAnimationLoop();
   }
 }
