@@ -14,6 +14,6 @@ FROM nginx:stable
 
 COPY --from=build /app/dist/clash-frontend/browser /usr/share/nginx/html
 
-EXPOSE 80
+EXPOSE 80/tcp
 
-EXPOSE 443
+EXPOSE 443/tcp

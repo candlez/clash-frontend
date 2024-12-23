@@ -34,6 +34,6 @@ export class BattleGraphComponent implements AfterViewInit, OnDestroy {
   }
 
   ngOnDestroy(): void {
-      this.resizeObserver.disconnect();
+    this.resizeObserver.disconnect();
   }
 }
